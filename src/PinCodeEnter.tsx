@@ -11,8 +11,10 @@ import {
   View,
   ViewStyle
 } from 'react-native'
-import * as Keychain from 'react-native-keychain'
+// import * as Keychain from 'react-native-keychain'
 import TouchID from 'react-native-touch-id'
+import * as SecureStore from 'expo-secure-store';
+
 
 /**
  * Pin Code Enter PIN Page
@@ -111,13 +113,13 @@ class PinCodeEnter extends React.PureComponent<IProps, IState> {
     this.endProcess = this.endProcess.bind(this)
     this.launchTouchID = this.launchTouchID.bind(this)
     if (!this.props.storedPin) {
-      Keychain.getInternetCredentials(
+      SecureStore.getItemAsync(
         this.props.pinCodeKeychainName
-      ).then(result => {
-        this.keyChainResult = result && result.password || undefined
-      }).catch(error => {
-        console.log('PinCodeEnter: ', error)
-      })
+        ).then(result => {
+          this.keyChainResult = result || undefined
+        }).catch(error => {
+          console.log('PinCodeEnter: ', error)
+        })
     }
   }
 
