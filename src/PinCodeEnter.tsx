@@ -11,7 +11,7 @@ import {
   View,
   ViewStyle
 } from 'react-native'
-// import * as Keychain from 'react-native-keychain'
+
 import TouchID from 'react-native-touch-id'
 import * as SecureStore from 'expo-secure-store';
 

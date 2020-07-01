@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.resetInternalStates = exports.deletePinCode = exports.hasPinCode = exports.PinResultStatus = void 0;
 const async_storage_1 = require("@react-native-community/async-storage");
-const Keychain = require("react-native-keychain");
+//import * as Keychain from 'react-native-keychain'
+const SecureStore = require("expo-secure-store");
 var PinResultStatus;
 (function (PinResultStatus) {
     PinResultStatus["initial"] = "initial";
@@ -11,12 +11,12 @@ var PinResultStatus;
     PinResultStatus["locked"] = "locked";
 })(PinResultStatus = exports.PinResultStatus || (exports.PinResultStatus = {}));
 exports.hasPinCode = async (serviceName) => {
-    return await Keychain.getInternetCredentials(serviceName).then(res => {
-        return !!res && !!res.password;
+    return await SecureStore.getItemAsync(serviceName).then(result => {
+        return !!result;
     });
 };
 exports.deletePinCode = async (serviceName) => {
-    return await Keychain.resetInternetCredentials(serviceName);
+    return await SecureStore.deleteItemAsync(serviceName);
 };
 exports.resetInternalStates = async (asyncStorageKeys) => {
     return await async_storage_1.default.multiRemove(asyncStorageKeys);
