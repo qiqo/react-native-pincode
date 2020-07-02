@@ -13,11 +13,11 @@ Using:
 ## Installation
 
 ```
-npm install --save @qiqo/react-native-pincode
+npm install git+https://git@github.com/qiqo/react-native-pincode
 ```
 or
 ```
-yarn add @qiqo/react-native-pincode
+yarn add https://github.com/qiqo/react-native-pincode
 ```
 
 **Please note that:**
