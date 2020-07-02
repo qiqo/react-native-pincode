@@ -259,7 +259,7 @@ class PinCodeEnter extends React.PureComponent<IProps, IState> {
             this.props.numbersButtonOverlayColor || undefined
           }
           passwordComponent={this.props.passwordComponent || null}
-          passwordLength={this.props.passwordLength || 4}
+          passwordLength={this.props.passwordLength || 6}
           pinCodeStatus={this.state.pinCodeStatus}
           pinCodeVisible={this.props.pinCodeVisible}
           previousPin={pin}

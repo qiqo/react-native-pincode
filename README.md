@@ -1,8 +1,8 @@
 # react-native-pincode
 
-[![npm](https://img.shields.io/npm/v/@haskkor/react-native-pincode.svg)](https://www.npmjs.com/package/@haskkor/react-native-pincode) [![npm](https://img.shields.io/npm/dt/@haskkor/react-native-pincode.svg)](https://www.npmjs.com/package/@haskkor/react-native-pincode) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![npm](https://img.shields.io/npm/v/@qiqo/react-native-pincode.svg)](https://www.npmjs.com/package/@qiqo/react-native-pincode) [![npm](https://img.shields.io/npm/dt/@qiqo/react-native-pincode.svg)](https://www.npmjs.com/package/@qiqo/react-native-pincode) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-_A customizable PIN Code component for react native_
+_A customizable PIN Code component for react nativemodified for Expo / Secure Storage by qiqo_
 
 Using:
 * _**[react-native-keychain](https://github.com/oblador/react-native-keychain)**_ to store the pin in Keychain/Keystore
@@ -13,11 +13,11 @@ Using:
 ## Installation
 
 ```
-npm install --save @haskkor/react-native-pincode
+npm install --save @qiqo/react-native-pincode
 ```
 or
 ```
-yarn add @haskkor/react-native-pincode
+yarn add @qiqo/react-native-pincode
 ```
 
 **Please note that:**
@@ -67,7 +67,7 @@ Basic usage requires choosing between the _**choose**_, _**enter**_ and _**locke
 * _**locked**_ : prints a locked screen for a given time if the user failed to enter his/her PIN code too many times
 
 ```
-import PINCode from '@haskkor/react-native-pincode'
+import PINCode from '@qiqo/react-native-pincode'
 <PINCode status={'choose'}/>
 ```
 
@@ -75,7 +75,7 @@ Package provides a promise to know if a PIN code has been set by the user.
 The `serviceName` parameter is optional. If provided, it should match the `pinCodeKeychainName` property.
 
 ```
-import {hasUserSetPinCode} from '@haskkor/react-native-pincode'
+import {hasUserSetPinCode} from '@qiqo/react-native-pincode'
 await hasUserSetPinCode(serviceName)
 ```
 
@@ -83,14 +83,14 @@ One can also use a provided function to delete a PIN code previously set in the 
 The `service name` parameter is optional. If provided, it should match the `pinCodeKeychainName` property.
 
 ``` 
-import {deleteUserPinCode} from '@haskkor/react-native-pincode'
+import {deleteUserPinCode} from '@qiqo/react-native-pincode'
 await deleteUserPinCode(serviceName)
 ```
 
 If needed, the internal states that record `the number of attemps` and `time of last attempt` can be reset in addition to user pin code deletion.
 
 ``` 
-import {resetPinCodeInternalStates} from '@haskkor/react-native-pincode'
+import {resetPinCodeInternalStates} from '@qiqo/react-native-pincode'
 await resetPinCodeInternalStates()
 ```
 

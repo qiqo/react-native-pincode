@@ -136,7 +136,7 @@ class PinCodeChoose extends React.PureComponent<IProps, IState> {
               this.props.numbersButtonOverlayColor || undefined
             }
             passwordComponent={this.props.passwordComponent || null}
-            passwordLength={this.props.passwordLength || 4}
+            passwordLength={this.props.passwordLength || 6}
             pinCodeVisible={this.props.pinCodeVisible}
             sentenceTitle={this.props.titleChoose}
             status={PinStatus.choose}
@@ -203,7 +203,7 @@ class PinCodeChoose extends React.PureComponent<IProps, IState> {
               this.props.numbersButtonOverlayColor || undefined
             }
             passwordComponent={this.props.passwordComponent || null}
-            passwordLength={this.props.passwordLength || 4}
+            passwordLength={this.props.passwordLength || 6}
             pinCodeVisible={this.props.pinCodeVisible}
             previousPin={this.state.pinCode}
             sentenceTitle={this.props.titleConfirm}
