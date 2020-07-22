@@ -23,7 +23,8 @@ const colors = {
     ausEquities: '#DECD58',
     globalEquities: '#FFAA4A',
     altStrategies: '#FC4349',
-    globalDebtSecurities: '#213249'
+    globalDebtSecurities: '#213249',
+    black: '#000000'
 };
 exports.colors = colors;
 const documentColor = (docType) => {
