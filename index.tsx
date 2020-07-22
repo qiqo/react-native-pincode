@@ -179,7 +179,7 @@ class PINCode extends React.PureComponent<IProps, IState> {
         textTitle={this.props.textTitleLockedPage || undefined}
         timePinLockedAsyncStorageName={this.props.timePinLockedAsyncStorageName || timePinLockedAsyncStorageNameDefault}
         timerComponent={this.props.timerComponentLockedPage || null}
-        timeToLock={this.props.timeLocked || 300000}
+        timeToLock={this.props.timeLocked || 60000}
         titleComponent={this.props.titleComponentLockedPage || undefined}
       />
     );

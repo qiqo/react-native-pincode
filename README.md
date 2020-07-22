@@ -139,7 +139,7 @@ await resetPinCodeInternalStates()
 |**`textPasswordVisibleFamily`**|Font to be used for the PIN code numbers when `pinCodeVisible` is true|`system font`|`false`|`string`|
 |**`textPasswordVisibleSize`**|Size of the font used for the PIN code numbers when `pinCodeVisible` is true|`22`|`false`|`number`|
 |**`textTitleLockedPage`**|String to be used as a title on the locked application page|`Maximum attempts reached`|`false`|`string`|
-|**`timeLocked`**|Number of milliseconds where the application should be locked after `maxAttempts` failed attempts from the user|`300000` (5 minutes)|`false`|`number`|
+|**`timeLocked`**|Number of milliseconds where the application should be locked after `maxAttempts` failed attempts from the user|`60000` (1 minute)|`false`|`number`|
 |**`timePinLockedAsyncStorageName`**|String to be used as a key in AsyncStorage to store the time when the user locks the application|`timePinLockedRNPin`|`false`|`string`|
 |**`timerComponentLockedPage`**|Component to be used on the application locked page to indicates the remaining locked time to the user|A Text component displaying a timer with the remaining locked time on the application locked page|`false`|`any`|
 |**`titleAttemptFailed`**|String used as a title on the PIN enter page when the user enters a wrong PIN code|`Incorrect PIN Code`|`false`|`string`|
