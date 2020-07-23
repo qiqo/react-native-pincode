@@ -105,9 +105,9 @@ export enum PinStatus {
 class PinCode extends React.PureComponent<IProps, IState> {
   static defaultProps: Partial<IProps> = {
     styleButtonCircle: null,
-    colorCircleButtons: "rgb(242, 245, 251)",
-    styleDeleteButtonColorHideUnderlay: "rgb(211, 213, 218)",
-    numbersButtonOverlayColor: colors.turquoise,
+    colorCircleButtons: "rgb(201, 201, 211)",
+    styleDeleteButtonColorHideUnderlay: "rgb(0, 0, 0)",
+    numbersButtonOverlayColor: colors.gray,
     styleDeleteButtonColorShowUnderlay: colors.dark,
     styleTextButton: null,
     styleColorButtonTitleSelected: colors.white,

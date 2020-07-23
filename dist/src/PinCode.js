@@ -418,9 +418,9 @@ class PinCode extends React.PureComponent {
 }
 PinCode.defaultProps = {
     styleButtonCircle: null,
-    colorCircleButtons: "rgb(242, 245, 251)",
-    styleDeleteButtonColorHideUnderlay: "rgb(211, 213, 218)",
-    numbersButtonOverlayColor: colors_1.colors.turquoise,
+    colorCircleButtons: "rgb(201, 201, 211)",
+    styleDeleteButtonColorHideUnderlay: "rgb(0, 0, 0)",
+    numbersButtonOverlayColor: colors_1.colors.gray,
     styleDeleteButtonColorShowUnderlay: colors_1.colors.dark,
     styleTextButton: null,
     styleColorButtonTitleSelected: colors_1.colors.white,

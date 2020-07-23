@@ -22,7 +22,8 @@ const colors = {
   globalEquities: '#FFAA4A',
   altStrategies: '#FC4349',
   globalDebtSecurities: '#213249',
-  black: '#000000'
+  black: '#000000',
+  gray:'#6C6060'
 }
 
 const documentColor = (docType: string) => {
